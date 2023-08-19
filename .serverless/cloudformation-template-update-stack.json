@@ -91,13 +91,18 @@
       "Properties": {
         "Code": {
           "S3Bucket": "cohort2.serverless.deploys",
-          "S3Key": "serverless/jason-cicd-sat190823/dev/1692415115636-2023-08-19T03:18:35.636Z/jason-cicd-sat190823.zip"
+          "S3Key": "serverless/jason-cicd-sat190823/dev/1692420385803-2023-08-19T04:46:25.803Z/jason-cicd-sat190823.zip"
         },
         "Handler": "index.handler",
         "Runtime": "nodejs18.x",
         "FunctionName": "jason-cicd-sat190823-dev-api",
         "MemorySize": 1024,
         "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "ACCESS_KEY": "abc"
+          }
+        },
         "Role": {
           "Fn::GetAtt": [
             "IamRoleLambdaExecution",
@@ -109,14 +114,14 @@
         "ApiLogGroup"
       ]
     },
-    "ApiLambdaVersionAZwcqDKP2HRkVO72CPLv4SrwBijyMVKk9IXqsFLLmkg": {
+    "ApiLambdaVersionnaR6HUdMBorp5OTvXeeQ3LjQiHkE0W5CqFsWyhZpg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ApiLambdaFunction"
         },
-        "CodeSha256": "RQ+Rg652+RzRrUtIr6lepKSBIzXjFoW9RZqyWOgC/Vk="
+        "CodeSha256": "BlfXWYiM4eSpObbxHEN4tvLDFm7vaLjhP/OI0okVopM="
       }
     },
     "HttpApi": {
@@ -225,7 +230,7 @@
     "ApiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ApiLambdaVersionAZwcqDKP2HRkVO72CPLv4SrwBijyMVKk9IXqsFLLmkg"
+        "Ref": "ApiLambdaVersionnaR6HUdMBorp5OTvXeeQ3LjQiHkE0W5CqFsWyhZpg"
       },
       "Export": {
         "Name": "sls-jason-cicd-sat190823-dev-ApiLambdaFunctionQualifiedArn"
