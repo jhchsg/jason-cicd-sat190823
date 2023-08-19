@@ -1,4 +1,4 @@
-service: <jason-cicd-sat190823>
+service: jason-cicd-sat190823
 frameworkVersion: '3'
 
 provider:
@@ -17,4 +17,3 @@ functions:
 
 plugins:
   - serverless-offline
-
